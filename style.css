@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'JosefinSans';
+    src: url(JosefinSans.ttf);
+}
+html{
+    opacity: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 160, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    transition: 2s;
+}
+:root{
+    --cube-width: 220px;
+    --translateZ: 110px;
+}
+ul{
+    font-size: 40px;
+    font-family: 'JosefinSans';
+    color: white;
+}
+li{
+    list-style-type:none;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+li:hover{
+    background-color: white;
+    color: black;
+}
+body{
+    
+    border-left-style: solid;
+    border-color: rgb(126, 122, 122);
+    border-right-style: solid;
+    border-width: 1px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    height: 100vh;
+    font-family: "Poppins";
+    background: black;
+}
+header{
+    font-family: JosefinSans;
+    color: whitesmoke;
+    margin-bottom: 140px;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.h1{
+    position: sticky;
+    top: 25px;
+    margin-bottom: 0px;
+    font-size: 100px;
+}
+
+header .sub-heading{
+    font-size: 19px;
+    margin-left: 20px;
+}
+.cube-container{
+    float: inline-start;
+    margin-left: 120px;
+    margin-top: 55px;
+    width: 40%;
+    perspective: 1000px;
+}
+
+.cube-container .cube{
+    width: var(--cube-width);
+    height: var(--cube-width);
+    transform-style: preserve-3d;
+}
+.cube-container .cube-face{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    background: black ;
+position: absolute;
+width: var(--cube-width);
+height: var(--cube-width);
+font-size: 30px;
+font-weight: bold;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: 0.6s;
+}
+.cube-face:hover{
+    background-color: white;
+    color: black;
+}
+
+.cube-container .front{
+    
+    
+    transform: translateZ(var(--translateZ));
+
+}
+.cube-container .back{
+    transform: rotateY(180deg) translateZ(var(--translateZ));
+
+}
+
+.cube-container .left{
+    transform: rotateY(-90deg) translateZ(var(--translateZ));
+
+}
+.cube-container .right{
+    transform: rotateY(90deg) translateZ(var(--translateZ));
+
+}
+.cube-container .top{
+    transform: rotateX(90deg) translateZ(var(--translateZ));
+
+}
+.cube-container .bottom{
+    transform: rotateX(-90deg) translateZ(var(--translateZ));
+
+}
