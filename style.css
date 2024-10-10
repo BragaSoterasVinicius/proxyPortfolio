@@ -1,3 +1,53 @@
+@media (max-width: 768px) {
+    .sub-heading{
+        margin-top: 31px;
+    }
+    .cube-container{
+        margin-top:-37px;
+        margin-left: 73px;
+        margin-bottom: 43px;
+    }
+    :root{
+        --cube-width: 144px;
+        --translateZ: 72px;
+    }
+    .h1 {
+        margin-left: 20px;
+      background-color: black;
+      font-size: 66px;
+    }
+    body{
+        margin: 0px;
+        height: 100vh;
+        width: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .cube-container{
+        margin-left: 120px;
+        margin-top: 55px;
+    }
+    :root{
+        --cube-width: 220px;
+        --translateZ: 110px;
+    }
+    .h1 {
+      font-size: 100px;
+    }
+    body{
+        border-left-style: solid;
+    border-color: rgb(126, 122, 122);
+    border-right-style: solid;
+    border-width: 1px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    height: 100vh;
+    }
+  }
 @font-face {
     font-family: 'JosefinSans';
     src: url(JosefinSans.ttf);
@@ -7,10 +57,7 @@ html{
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 160, 1) 50%, rgba(255, 255, 255, 1) 100%);
     transition: 2s;
 }
-:root{
-    --cube-width: 220px;
-    --translateZ: 110px;
-}
+
 ul{
     font-size: 40px;
     font-family: 'JosefinSans';
@@ -27,16 +74,7 @@ li:hover{
 }
 body{
     
-    border-left-style: solid;
-    border-color: rgb(126, 122, 122);
-    border-right-style: solid;
-    border-width: 1px;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 0px;
-    height: 100vh;
+    
     font-family: "Poppins";
     background: black;
 }
@@ -53,7 +91,6 @@ header{
     position: sticky;
     top: 25px;
     margin-bottom: 0px;
-    font-size: 100px;
 }
 
 header .sub-heading{
@@ -62,8 +99,6 @@ header .sub-heading{
 }
 .cube-container{
     float: inline-start;
-    margin-left: 120px;
-    margin-top: 55px;
     width: 40%;
     perspective: 1000px;
 }
