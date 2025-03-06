@@ -1,10 +1,15 @@
 @media (max-width: 768px) {
+    #menu{
+        margin-top: 80px;
+    }
     .sub-heading{
+        display: none;
         margin-top: 31px;
     }
     .cube-container{
-        margin-top:-37px;
-        margin-left: 73px;
+        top: 65px;
+        position: relative;
+        left: 46%;
         margin-bottom: 43px;
     }
     :root{
@@ -17,8 +22,8 @@
       font-size: 66px;
     }
     body{
-        margin: 0px;
-        height: 100vh;
+        margin-left: 0px;
+        margin-top: 45px;
         width: 100%;
     }
     ul{
@@ -89,8 +94,6 @@ li:hover{
     color: black;
 }
 body{
-    
-    
     font-family: "Poppins";
     background: black;
 }
