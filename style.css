@@ -21,10 +21,15 @@
         height: 100vh;
         width: 100%;
     }
+    ul{
+        
+    font-size: 40px;
+    }
   }
 
   @media (min-width: 768px) {
     .cube-container{
+        float: right;
         margin-left: 120px;
         margin-top: 55px;
     }
@@ -33,19 +38,18 @@
         --translateZ: 110px;
     }
     .h1 {
-      font-size: 100px;
+      margin-left: 6%;
+      font-size: 155px;
     }
     body{
-        border-left-style: solid;
     border-color: rgb(126, 122, 122);
-    border-right-style: solid;
     border-width: 1px;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 0px;
+    margin-top: 3.5%;
     margin-bottom: 0px;
     padding: 0px;
-    height: 100vh;
+    }
+    ul{
+        font-size: 60px;
     }
   }
 @font-face {
@@ -54,12 +58,10 @@
 }
 html{
     opacity: 0;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 160, 1) 50%, rgba(255, 255, 255, 1) 100%);
     transition: 2s;
 }
 
 ul{
-    font-size: 40px;
     font-family: 'JosefinSans';
     color: white;
 }
@@ -94,11 +96,11 @@ header{
 }
 
 header .sub-heading{
-    font-size: 19px;
-    margin-left: 20px;
+    margin-top: -20px;
+    font-size: 26px;
+    margin-left: 7%
 }
 .cube-container{
-    float: inline-start;
     width: 40%;
     perspective: 1000px;
 }
