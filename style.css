@@ -25,17 +25,28 @@
         
     font-size: 40px;
     }
+    .cube-container .cube-face{
+        font-size: 20px;
+    }
   }
 
   @media (min-width: 768px) {
+    .cube-container .cube-face{
+        border-width: 5px;
+        font-size: 52px;
+    }
+    .container{
+        margin-left: 5%;
+    }
     .cube-container{
         float: right;
-        margin-left: 120px;
-        margin-top: 55px;
+        position: absolute;
+        right: 25%;
+        margin-top: 78px;
     }
     :root{
-        --cube-width: 220px;
-        --translateZ: 110px;
+        --cube-width: 330px;
+        --translateZ: 165px;
     }
     .h1 {
       margin-left: 6%;
@@ -48,8 +59,11 @@
     margin-bottom: 0px;
     padding: 0px;
     }
+    header{   
+        margin-bottom: 104px;
+    }
     ul{
-        font-size: 60px;
+        font-size: 69px;
     }
   }
 @font-face {
@@ -83,11 +97,9 @@ body{
 header{
     font-family: JosefinSans;
     color: whitesmoke;
-    margin-bottom: 140px;
 }
 .container{
     max-width: 1000px;
-    margin: 0 auto;
 }
 .h1{
     position: sticky;
@@ -101,7 +113,6 @@ header .sub-heading{
     margin-left: 7%
 }
 .cube-container{
-    width: 40%;
     perspective: 1000px;
 }
 
@@ -121,7 +132,6 @@ header .sub-heading{
 position: absolute;
 width: var(--cube-width);
 height: var(--cube-width);
-font-size: 30px;
 font-weight: bold;
 display: flex;
 align-items: center;
