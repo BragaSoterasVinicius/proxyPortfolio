@@ -3,18 +3,38 @@
     src: url(JosefinSans.ttf);
 }
 html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     background-color: black;
 }
 header{
+    margin-top: 20px;
     font-family: JosefinSans;
 }
+hr{
+    margin-top: -2px;
+}
 #title {
-  margin-left: 20px;
-  background-color: black;
-  font-size: 66px;
+  margin-left: 0px;
+  font-size: 40px;
 }
 #subtitle{
-    font-size: 20px;
-    margin-left: -20px;
+    font-size: 15px;
+    margin-left: -13px;
+}
+body{
+    padding: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    width: 700px;
+    margin-top: 66px;
+}
+.noticiasRelevantes{
+    margin-top: 20px;
+    height: 230px;
+    border-style: solid;
+    border-color: red;
 }
