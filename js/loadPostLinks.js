@@ -128,7 +128,7 @@ function setNoticiaImportante(post_id){
     }
   });
   loadPosts().then(posts => {
-    const lastPost = posts[posts.length - 1];
+    const lastPost = posts[post_id - 1];
     const title = document.createElement('span');
     title.className = 'importantPostTitle';
     title.innerText = lastPost.Titulo;
