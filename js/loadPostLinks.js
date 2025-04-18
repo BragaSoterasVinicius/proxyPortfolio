@@ -35,11 +35,14 @@ function loadPosts(){
           const div = document.createElement('div');
           div.className = 'post';
           div.innerHTML = `
-            <span id="image-${post.id}"></span><br>
+            <div id="image-${post.id}"></div><br>
+            <div>
+            
             <span class="postTitle"> ${post.Titulo}</span><br>
-            <span class="conteudoPost">${post.conteúdo}</span><br>
-            <span class="dataConteudo"> ${post.date}</span>
-            <span class="tagChatinha" id="tag-${post.id}"></span>
+            <span class="tagChatinha" id="tag-${post.id}"></span><br>
+            <span class="dataConteudo"> ${post.date}</span><br>
+            <div class="conteudoPost">${post.conteúdo}</div><br>
+            </div>
           `;
           container.appendChild(div);
           loadImages(post.id, 0).then(link => {

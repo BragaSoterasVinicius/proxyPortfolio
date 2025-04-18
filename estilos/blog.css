@@ -31,11 +31,9 @@ img
 }
 body{
     padding: 10px;
-    border-width: 2px;
-    border-style: solid;
     border-color: white;
     width: 800px;
-    margin-top: 66px;
+    margin-top: 33px;
 }
 .noticiasRelevantes{
     margin-top: 17px;
@@ -72,7 +70,21 @@ body{
 #linkDePostagens{
     width: 75%;
     float: left;
+    border-right-style: solid;
+    border-right-width: 1px;
 }
 #filtro{
     
+}
+.tagChatinha{
+    position: absolute;
+    top: 1px;
+}
+.individualTag{
+    padding: 3px;
+    font-size: 12px;
+    margin: 4px 2px 4px 2px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
 }
