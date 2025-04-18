@@ -107,5 +107,17 @@ function loadTagNameByTagId(tag_id){
 }});
 }
 
+function setNoticiaImportante(post_id){
+  loadImages(post_id, 0).then(firstImage => {
+    const noticiaImportanteContainer = document.getElementsByClassName("noticiasRelevantes");
+    if (noticiaImportanteContainer.length > 0) {
+      noticiaImportanteContainer[0].style.backgroundImage = `url(${firstImage})`;
+      noticiaImportanteContainer[0].style.backgroundSize = 'cover';
+      noticiaImportanteContainer[0].style.backgroundPosition = 'center';
+    }
+  });
+
+}
+setNoticiaImportante(1,0);
 loadPosts();
 buildTags();
