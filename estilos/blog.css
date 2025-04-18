@@ -18,7 +18,8 @@ hr{
 }
 img
 {
-    width: 262px;
+    float: inline-start;
+    width: 230px;
 }
 #title {
   margin-left: 0px;
@@ -33,29 +34,44 @@ body{
     border-width: 2px;
     border-style: solid;
     border-color: white;
-    width: 700px;
+    width: 800px;
     margin-top: 66px;
 }
 .noticiasRelevantes{
     margin-top: 17px;
-    height: 230px;
-    border-style: solid;
-    border-color: red;
+    height: 500px;
+    position: relative;
+    background-size: cover;
+}
+.noticiasRelevantes tag{
+    /*adicionar url do background*/
+    margin-left: 14px;
+    position: absolute;
+    color: black;
+    font-family: 'JosefinSans';
+    font-size: 59px;
+    bottom: 0px;
 }
 .noticiasRecentesETags{
     overflow: hidden;
     margin-top: 10px;
-    border-style: solid;
-    border-color: lightskyblue;
+}
+.post{
+    display: inline-block;
+    position: relative;
+}
+.postTitle{
+    margin-left: 3px;
+    margin-bottom: 1px;
+    line-height: 42px;
+    font-size: 42px;
+    bottom: 3px;
+    position: absolute;
 }
 #linkDePostagens{
-    width: 68%;
+    width: 75%;
     float: left;
-    border-style: solid;
-    border-color: aqua;
 }
 #filtro{
     
-    border-style: solid;
-    border-color: violet;
 }

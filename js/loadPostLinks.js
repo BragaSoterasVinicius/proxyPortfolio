@@ -36,13 +36,10 @@ function loadPosts(){
           div.className = 'post';
           div.innerHTML = `
             <span id="image-${post.id}"></span><br>
-            <strong>Id:</strong> ${post.id}<br>
-            <strong>Titulo:</strong> ${post.Titulo}<br>
-            <strong>conteúdo:</strong> ${post.conteúdo}<br>
-            <strong>Date:</strong> ${post.date}<br>
-            <strong>Tags:</strong> <span id="tag-${post.id}"></span><br>
-            
-
+            <span class="postTitle"> ${post.Titulo}</span><br>
+            <span class="conteudoPost">${post.conteúdo}</span><br>
+            <span class="dataConteudo"> ${post.date}</span>
+            <span class="tagChatinha" id="tag-${post.id}"></span>
           `;
           container.appendChild(div);
           loadImages(post.id, 0).then(link => {
