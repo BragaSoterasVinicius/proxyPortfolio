@@ -35,7 +35,7 @@ function loadPosts(){
           const div = document.createElement('div');
           div.className = 'post';
           div.innerHTML = `
-           <strong>Imagem</strong> <span id="image-${post.id}"></span><br>
+            <span id="image-${post.id}"></span><br>
             <strong>Id:</strong> ${post.id}<br>
             <strong>Titulo:</strong> ${post.Titulo}<br>
             <strong>conteúdo:</strong> ${post.conteúdo}<br>

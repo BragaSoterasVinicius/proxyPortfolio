@@ -16,6 +16,10 @@ header{
 hr{
     margin-top: -2px;
 }
+img
+{
+    width: 262px;
+}
 #title {
   margin-left: 0px;
   font-size: 40px;
