@@ -89,9 +89,9 @@ function buildTags(){
   data.forEach(tag => {
     const div = document.createElement('div');
     div.className = 'tagselector';
-    div.innerHTML = `
-      <strong>Tag:</strong> ${tag.tag_id}<br>
-      <strong>Titulo:</strong> ${tag.tag_name}<br>
+    div.innerHTML = 
+      // <strong>Tag:</strong> ${tag.tag_id}<br>
+      `<span class="individualTag">${tag.tag_name}</span>
     `;
     container.appendChild(div);
   });});
