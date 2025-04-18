@@ -41,7 +41,7 @@ body{
     position: relative;
     background-size: cover;
 }
-.noticiasRelevantes tag{
+.noticiasRelevantes span{
     /*adicionar url do background*/
     margin-left: 14px;
     position: absolute;
@@ -58,6 +58,9 @@ body{
     display: inline-block;
     position: relative;
     margin-bottom: 9px;
+}
+.post:hover{
+    background-color: rgb(22, 22, 22);
 }
 .postTitle{
     margin-left: 3px;
@@ -96,9 +99,10 @@ body{
    margin-left: 245px;
 }
 .dataConteudo{
+    font-size: 23px;
     right: 9px;
     position: absolute;
-    top: 1px;
+    top: -1px;
 }
 .tagselector{
     margin-top: 6px;
