@@ -28,12 +28,12 @@ function loadImages(post_id, img_pos){
         .catch(err => {console.error('Error:', err); return [];});
   }
 
-function buildPosts(){
-  loadPosts().then(data =>{
+function buildPosts(data){
   data.reverse();
   const container = document.getElementById('linkDePostagens');
-
+  console.log(data)
   data.forEach(post => {
+    console.log(post);
     const dateOnly = new Date(post.date).toISOString().slice(0, 10);
     const div = document.createElement('div');
     div.className = 'post';
@@ -73,10 +73,9 @@ function buildPosts(){
       }
     });
   });
-});
 }
 
-function loadPosts(){
+function loadPosts(post_id){
     return fetch('http://localhost:3000/posts')
       .then(response => response.json())
       .then(data => {
@@ -94,6 +93,43 @@ function loadTags(){
       .catch(err => console.error('Error:', err));
 }
 
+function loadPostsIdsByTag(tag_id){
+  return fetch('http://localhost:3000/tags/'+tag_id+'/posts')
+      .then(response => response.json())
+      .then(data => {
+        return data;
+      })
+      .catch(err => console.error('Error:', err));
+}
+function clearPostsInLinkDePostagens(){
+  const container = document.getElementById('linkDePostagens');
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+}
+function filterPostsByTag(tag_id){
+  clearPostsInLinkDePostagens()
+  console.log(tag_id);
+  loadPostsIdsByTag(tag_id).then(post_ids => {
+    console.log(post_ids);
+    Promise.all(
+      post_ids.map(post_id => {
+        console.log(post_id);
+        return fetch(`http://localhost:3000/posts/${post_id.post_id}`)
+          .then(response => response.json())
+          .catch(err => {
+            console.error(`Erro chamando post de id ${post_id}:`, err);
+            return null; 
+          });
+      })
+    ).then(posts => {
+      const validPosts = posts.flat().filter(post => post !== null); // Flatten the array and filter out null values
+      console.log('then build', validPosts);
+      buildPosts(validPosts);
+    }).catch(err => console.error('Error fetching posts:', err));
+  });
+}
+
 function buildTags(){
   loadTags().then(data => {
   const container = document.getElementById('filtro');
@@ -101,8 +137,7 @@ function buildTags(){
     const div = document.createElement('div');
     div.className = 'tagselector';
     div.innerHTML = 
-      // <strong>Tag:</strong> ${tag.tag_id}<br>
-      `<span class="individualTag">${tag.tag_name}</span>
+      `<span class="individualTag" onclick="filterPostsByTag(${tag.tag_id})">${tag.tag_name}</span>
     `;
     container.appendChild(div);
   });});
@@ -136,5 +171,8 @@ function setNoticiaImportante(post_id){
   });
 }
 setNoticiaImportante(1,0);
-buildPosts();
+let data = loadPosts();
+loadPosts().then(data => {
+  buildPosts(data);
+}).catch(err => console.error('Error:', err));
 buildTags();
