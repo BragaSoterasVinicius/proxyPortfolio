@@ -70,18 +70,10 @@ function buildPosts(data){
       }
     });
   });
-  const posts = document.querySelectorAll('.post'); 
-  posts.forEach(post => {
-    post.addEventListener('click', () => {
-      const postId = post.getAttribute('data-id'); 
-      if (postId) {
-        handlePostClick(postId);
-      }
-    });
-  });
 }
 
 function handlePostClick(postId) {
+  console.log(postId);
 }
 
 function loadPosts(post_id){
