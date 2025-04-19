@@ -82,14 +82,19 @@ function handlePostClick(postId) {
   const fullBlogPost = document.createElement('div');
   fullBlogPost.className = "postLayout";
   fullBlogPost.innerHTML = `
-  <div class="imageInsidePost" id="image-${post.id}"></div>
+  <div  id="image-${post.id}"></div>
   `
   document.body.appendChild(fullBlogPost);
   loadImages(post.id, 0).then(link => {
     // trocar por uma getElementByClass com a busca envolvendo a posição da imagem no id quando adicionar múltiplas imagens por post.
     const imageSpan = document.getElementById(`image-${post.id}`);
     if (imageSpan) {
-        imageSpan.innerHTML = `<img src="${link}" alt="Post Image" />`;
+        imageSpan.innerHTML = `
+        <h1>${post.Titulo}</h1>
+        <img class='link' src='../resources/imgs/closeicon.png' alt="close page" />
+        <img src="${link}" class="imageInsidePost" alt="Post Image" />
+        <p class="conteudoInsidePost">${post.conteúdo}</p>
+        `;
     }
 
 });
