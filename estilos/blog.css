@@ -105,5 +105,9 @@ body{
     top: -1px;
 }
 .tagselector{
-    margin-top: 6px;
+    display: inline-block;
+}
+.tagselector :hover{
+    background-color: white;
+    color: black;
 }
