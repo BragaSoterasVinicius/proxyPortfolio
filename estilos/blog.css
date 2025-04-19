@@ -21,6 +21,9 @@ img
     float: inline-start;
     width: 230px;
 }
+h1{
+    /*font-family: JosefinSans;*/   
+}
 #title {
   margin-left: 0px;
   font-size: 40px;
