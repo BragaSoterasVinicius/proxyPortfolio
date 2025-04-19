@@ -91,7 +91,7 @@ function handlePostClick(postId) {
     if (imageSpan) {
         imageSpan.innerHTML = `
         <h1>${post.Titulo}</h1>
-        <img class='link' src='../resources/imgs/closeicon.png' alt="close page" />
+        <img  onclick='refreshPage()' class='link' src='../resources/imgs/closeicon.png' alt="close page" />
         <img src="${link}" class="imageInsidePost" alt="Post Image" />
         <p class="conteudoInsidePost">${post.conteúdo}</p>
         `;
@@ -99,6 +99,10 @@ function handlePostClick(postId) {
 
 });
 });}
+
+function refreshPage(){
+  window.location.reload();
+}
 
 function loadPosts(post_id){
   if(!post_id){
