@@ -73,16 +73,44 @@ function buildPosts(data){
 }
 
 function handlePostClick(postId) {
+  clearPostsInLinkDePostagens();
   console.log(postId);
-}
+  loadPosts(postId).then( post => {
+  if (Array.isArray(post) && post.length === 1) {
+    post = post[0]; // Extract the sole array element into post
+  }
+  const fullBlogPost = document.createElement('div');
+  fullBlogPost.className = "postLayout";
+  fullBlogPost.innerHTML = `
+  <div class="imageInsidePost" id="image-${post.id}"></div>
+  `
+  document.body.appendChild(fullBlogPost);
+  loadImages(post.id, 0).then(link => {
+    // trocar por uma getElementByClass com a busca envolvendo a posição da imagem no id quando adicionar múltiplas imagens por post.
+    const imageSpan = document.getElementById(`image-${post.id}`);
+    if (imageSpan) {
+        imageSpan.innerHTML = `<img src="${link}" alt="Post Image" />`;
+    }
+
+});
+});}
 
 function loadPosts(post_id){
+  if(!post_id){
     return fetch('http://localhost:3000/posts')
       .then(response => response.json())
       .then(data => {
         return data;
       })
       .catch(err => console.error('Error:', err));
+    }else{
+      return fetch('http://localhost:3000/posts/'+post_id)
+      .then(response => response.json())
+      .then(data => {
+        return data;
+      })
+      .catch(err => console.error('Error:', err));
+    }
 }
 
 function loadTags(){
