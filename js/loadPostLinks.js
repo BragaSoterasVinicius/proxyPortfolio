@@ -36,10 +36,11 @@ function buildPosts(data){
     const dateOnly = new Date(post.date).toISOString().slice(0, 10);
     const div = document.createElement('div');
     div.className = 'post';
+    div.setAttribute('data-id', post.id); // Add a data-id attribute for the post ID
+    div.setAttribute('onclick', `handlePostClick(${post.id})`); // Add an onclick attribute
     div.innerHTML = `
       <div id="image-${post.id}"></div><br>
       <div>
-      
       <span class="postTitle"> ${post.Titulo}</span><br>
       <span class="tagChatinha" id="tag-${post.id}"></span><br>
       <span class="dataConteudo"> ${dateOnly}</span><br>
@@ -69,6 +70,18 @@ function buildPosts(data){
       }
     });
   });
+  const posts = document.querySelectorAll('.post'); 
+  posts.forEach(post => {
+    post.addEventListener('click', () => {
+      const postId = post.getAttribute('data-id'); 
+      if (postId) {
+        handlePostClick(postId);
+      }
+    });
+  });
+}
+
+function handlePostClick(postId) {
 }
 
 function loadPosts(post_id){
