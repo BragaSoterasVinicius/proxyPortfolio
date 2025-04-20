@@ -108,6 +108,7 @@ body{
     top: -1px;
 }
 .tagselector{
+    margin-bottom: 8px;
     display: inline-block;
 }
 .tagselector :hover{
