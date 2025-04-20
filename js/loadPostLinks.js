@@ -200,9 +200,10 @@ function setNoticiaImportante(post_id){
     }
   });
   loadPosts().then(posts => {
-    const lastPost = posts[post_id - 1];
+    const lastPost = posts.find(post => post.id === post_id);
     const title = document.createElement('span');
     title.className = 'importantPostTitle';
+    console.log(posts);
     title.innerText = lastPost.Titulo;
     noticiaImportanteContainer[0].appendChild(title);
   });
