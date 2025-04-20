@@ -191,6 +191,7 @@ function setNoticiaImportante(post_id){
   while (container[0].firstChild) {
     container[0].removeChild(container[0].firstChild);
   }
+  container[0].setAttribute('onclick', `handlePostClick(${post_id})`);
   const noticiaImportanteContainer = document.getElementsByClassName("noticiasRelevantes");
   loadImages(post_id, 0).then(firstImage => {
     if (noticiaImportanteContainer.length > 0) {
@@ -200,6 +201,7 @@ function setNoticiaImportante(post_id){
     }
   });
   loadPosts().then(posts => {
+
     const lastPost = posts.find(post => post.id === post_id);
     const title = document.createElement('span');
     title.className = 'importantPostTitle';
