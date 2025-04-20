@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'JosefinSans';
+    src: url(JosefinSans.ttf);
+}
+html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+}
+header{
+    margin-top: 20px;
+    font-family: JosefinSans;
+}
+hr{
+    margin-top: -2px;
+}
+img
+{
+    float: inline-start;
+    width: 230px;
+}
+h1{
+    /*font-family: JosefinSans;*/   
+}
+#title {
+  margin-left: 0px;
+  font-size: 40px;
+}
+#subtitle{
+    font-size: 15px;
+    margin-left: -13px;
+}
+body{
+    padding: 10px;
+    border-color: white;
+    width: 800px;
+    margin-top: 33px;
+}
+.noticiasRelevantes{
+    margin-top: 17px;
+    height: 500px;
+    position: relative;
+    background-size: cover;
+}
+.noticiasRelevantes:hover{
+    transform: scale(1.02);
+    transition: transform 1s ease;
+}
+.noticiasRelevantes {
+    transform: scale(1); 
+    transition: transform 1s ease;
+}
+.noticiasRelevantes span{
+    /*adicionar url do background*/
+    margin-left: 14px;
+    position: absolute;
+    color: black;
+    font-family: 'JosefinSans';
+    font-size: 59px;
+    bottom: 0px;
+}
+.noticiasRecentesETags{
+    overflow: hidden;
+    margin-top: 10px;
+}
+.post{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 9px;
+    width: 100%;
+}
+.post:hover{
+    background-color: rgb(22, 22, 22);
+}
+.postTitle{
+    margin-left: 3px;
+    margin-bottom: 1px;
+    line-height: 42px;
+    font-size: 42px;
+    bottom: 3px;
+    position: absolute;
+}
+#linkDePostagens{
+    width: 75%;
+    float: left;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+#filtro{
+    margin-top: 1px;
+    
+}
+.tagChatinha{
+    position: absolute;
+    top: 1px;
+}
+.individualTag{
+    padding: 3px;
+    font-size: 12px;
+    margin: 4px 2px 4px 2px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+}
+.conteudoPost{
+    overflow: hidden;
+    height: 123px;
+    margin-right: 73px;
+   margin-left: 245px;
+}
+.dataConteudo{
+    font-size: 23px;
+    right: 9px;
+    position: absolute;
+    top: -1px;
+}
+.tagselector{
+    margin-bottom: 8px;
+    display: inline-block;
+}
+.tagselector :hover{
+    background-color: white;
+    color: black;
+}
+.postLayout{
+    top: 0px;
+    position: absolute;
+    width: 800px;
+    background-color: black;
+    margin-top: 120px;
+    height: calc(95% - 103px);
+}
+.imageInsidePost{
+    margin-top: -10px;
+    object-fit: cover; 
+    width: 100%;
+    float: none;
+}
+.conteudoInsidePost{
+    margin-left: 10px;
+}
+.icon{
+}
+.link{
+    right: 0px;
+    top: 23px;
+    position: absolute;
+    filter: invert(1);
+    width: 25px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 3px;
+    border-radius: 15px;
+}
+.link:hover{
+    background-color: white;
+    filter: invert(0);
+}
