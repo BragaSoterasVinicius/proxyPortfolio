@@ -44,6 +44,14 @@ body{
     position: relative;
     background-size: cover;
 }
+.noticiasRelevantes:hover{
+    transform: scale(1.02);
+    transition: transform 1s ease;
+}
+.noticiasRelevantes {
+    transform: scale(1); 
+    transition: transform 1s ease;
+}
 .noticiasRelevantes span{
     /*adicionar url do background*/
     margin-left: 14px;
