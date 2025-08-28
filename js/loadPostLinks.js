@@ -2,7 +2,7 @@ let data = []
 var postList = loadPosts();
 
 function loadImages(post_id, img_pos){
-  return fetch(`http://localhost:3000/linkimg/${post_id}/${img_pos}`)
+  return fetch(`https://soterasdev.com/blogpostninstali/linkimg/${post_id}/${img_pos}`)
   .then(response => response.json())
   .then(data => {
       if (data.length > 0) {
@@ -17,7 +17,7 @@ function loadImages(post_id, img_pos){
   });
   }
   function loadTagsPerPostId(poste_id){
-    return fetch('http://localhost:3000/posts/'+poste_id+'/tags')
+    return fetch('https://soterasdev.com/blogpostninstali/posts/'+poste_id+'/tags')
         .then(response => response.json())
         .then(data => {
           if (data.length > 0) {
@@ -106,14 +106,14 @@ function refreshPage(){
 
 function loadPosts(post_id){
   if(!post_id){
-    return fetch('http://localhost:3000/posts')
+    return fetch('https://soterasdev.com/blogpostninstali/posts')
       .then(response => response.json())
       .then(data => {
         return data;
       })
       .catch(err => console.error('Error:', err));
     }else{
-      return fetch('http://localhost:3000/posts/'+post_id)
+      return fetch('https://soterasdev.com/blogpostninstali/posts/'+post_id)
       .then(response => response.json())
       .then(data => {
         return data;
@@ -123,7 +123,7 @@ function loadPosts(post_id){
 }
 
 function loadTags(){
-    return fetch('http://localhost:3000/tags')
+    return fetch('https://soterasdev.com/blogpostninstali/tags')
       .then(response => response.json())
       .then(data => {
         return data;
@@ -132,7 +132,7 @@ function loadTags(){
 }
 
 function loadPostsIdsByTag(tag_id){
-  return fetch('http://localhost:3000/tags/'+tag_id+'/posts')
+  return fetch('https://soterasdev.com/blogpostninstali/tags/'+tag_id+'/posts')
       .then(response => response.json())
       .then(data => {
         return data;
@@ -150,7 +150,7 @@ function filterPostsByTag(tag_id){
   loadPostsIdsByTag(tag_id).then(post_ids => {
     Promise.all(
       post_ids.map(post_id => {
-        return fetch(`http://localhost:3000/posts/${post_id.post_id}`)
+        return fetch(`https://soterasdev.com/blogpostninstali/posts/${post_id.post_id}`)
           .then(response => response.json())
           .catch(err => {
             console.error(`Erro chamando post de id ${post_id}:`, err);
