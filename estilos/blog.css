@@ -2,6 +2,70 @@
     font-family: 'JosefinSans';
     src: url(JosefinSans.ttf);
 }
+#linkDePostagens{
+    width: 75%;
+    float: left;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+.dataConteudo{
+    font-size: 23px;
+    right: 9px;
+    position: absolute;
+    top: -1px;
+}
+.postTitle{
+    margin-left: 3px;
+    margin-bottom: 1px;
+    line-height: 42px;
+    font-size: 42px;
+    bottom: 3px;
+    position: absolute;
+}
+.conteudoPost{
+    overflow: hidden;
+    height: 123px;
+    margin-right: 73px;
+   margin-left: 245px;
+}
+.postLayout{
+    top: 0px;
+    position: absolute;
+    width: 800px;
+    background-color: black;
+    margin-top: 120px;
+    height: calc(95% - 103px);
+}
+@media (max-width: 768px) {
+    main{
+        display: inline-grid;
+        width: 100%;
+    }    
+    #filtro
+    {
+        display: none;
+    }
+    #linkDePostagens{
+        width: 100%;
+    }
+    .dataConteudo{
+        top: 26px;
+        right: auto;
+    }
+    .postTitle{
+        line-height: 32px;
+        font-size: 34px;
+    }
+    .conteudoPost{
+        max-height: 69px;
+        margin-right: auto;
+    }
+    .postLayout{
+        margin-left: -3px;
+        margin-right: 13px;
+        width: auto;
+    }
+}
 html{
     display: flex;
     justify-content: center;
@@ -74,20 +138,6 @@ body{
 .post:hover{
     background-color: rgb(22, 22, 22);
 }
-.postTitle{
-    margin-left: 3px;
-    margin-bottom: 1px;
-    line-height: 42px;
-    font-size: 42px;
-    bottom: 3px;
-    position: absolute;
-}
-#linkDePostagens{
-    width: 75%;
-    float: left;
-    border-right-style: solid;
-    border-right-width: 1px;
-}
 #filtro{
     margin-top: 1px;
     
@@ -104,18 +154,6 @@ body{
     border-style: solid;
     border-width: 1px;
 }
-.conteudoPost{
-    overflow: hidden;
-    height: 123px;
-    margin-right: 73px;
-   margin-left: 245px;
-}
-.dataConteudo{
-    font-size: 23px;
-    right: 9px;
-    position: absolute;
-    top: -1px;
-}
 .tagselector{
     margin-bottom: 8px;
     display: inline-block;
@@ -123,14 +161,6 @@ body{
 .tagselector :hover{
     background-color: white;
     color: black;
-}
-.postLayout{
-    top: 0px;
-    position: absolute;
-    width: 800px;
-    background-color: black;
-    margin-top: 120px;
-    height: calc(95% - 103px);
 }
 .imageInsidePost{
     margin-top: -10px;
